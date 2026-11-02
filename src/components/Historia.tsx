@@ -25,17 +25,16 @@ function Historia() {
   return (
     <section
       id="nossa-historia"
-      className="bg-white px-6 pt-6 pb-12 sm:px-10 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-20"
+      className="bg-stone-100 px-6 pt-6 pb-12 sm:px-10 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-20"
     >
-      {/* Limitamos a largura do contentor principal para max-w-5xl para alinhar tudo perfeitamente com a margem desejada */}
-      <div className="mx-auto w-full max-w-5xl">
+      {/* Tamanho igual ao Hero */}
+      <div className="mx-auto w-full max-w-6xl">
         
         <h2 className="font-serif text-4xl font-bold leading-tight text-[#103586] sm:text-5xl">
           50 anos cuidando de quem está crescendo.
         </h2>
 
-        {/* Removi o max-w-3xl restritivo daqui para que o texto ocupe a mesma largura uniforme do bloco */}
-        <div className="mt-5 space-y-4 font-sans font-normal text-sm leading-7 text-[#56617A] sm:text-lg">
+        <div className="mt-5 space-y-4 font-sans font-normal text-sm leading-7 text-slate-600  sm:text-lg">
           <p>
             Fundada em 5 de agosto de 1976, pela Pastora Alice Castello Mattar,
             a Associação Recanto Betel, originalmente denominada Recanto Santa
@@ -50,7 +49,6 @@ function Historia() {
           </p>
         </div>
 
-        {/* Imagem perfeitamente contida e alinhada às margens do contentor pai */}
         <img
           src={historyImage}
           alt="Fachada da Associação Recanto Betel"
@@ -60,12 +58,10 @@ function Historia() {
         <ol className="grid grid-cols-1 gap-6 md:grid-cols-4">
           {milestones.map((milestone, index) => (
             <li key={milestone.year} className="relative pt-6">
-              {/* Linha divisória ajustada para alinhar perfeitamente */}
               <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-1.5 h-[2px] bg-blue-200"
               />
-              {/* Ponto indicador alinhado de forma exata */}
               <span
                 aria-hidden="true"
                 className={`absolute left-0 top-1 z-10 h-3 w-3 -translate-y-0.5 rounded-full border-2 ${
